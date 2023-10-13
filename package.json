@@ -9,7 +9,8 @@
     "lint": "next lint",
     "prettier": "npx prettier --write **/*.{ts,tsx,json}",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_de20c79de58d622"
   },
   "dependencies": {
     "next": "13.5.4",
@@ -28,6 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "chromatic": "^7.4.0",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "eslint-config-prettier": "^9.0.0",
@@ -36,5 +38,7 @@
     "sass": "^1.69.3",
     "storybook": "^7.4.6",
     "typescript": "^5"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "tea-project@0.1.0"
 }

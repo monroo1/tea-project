@@ -32,3 +32,10 @@ export const Disabled: Story = {
         disable: true,
     },
 };
+
+export const DisabledClear: Story = {
+    args: {
+        variant: "clear",
+        disable: true,
+    },
+};
