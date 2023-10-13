@@ -1,0 +1,47 @@
+.Button {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 12px 32px;
+    
+}
+
+.outline {
+    &:hover {
+        color: var(--accent-color);
+    }
+
+    &.disabled {
+        color: var(--light-text-color);
+    }
+}
+
+.filled {
+    background: var(--primary-color);
+    color: var(--bg-color);
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.clear {
+    border: none;
+
+    &.disabled {
+
+    }
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: default;
+    background: none;
+    color: var(--light-text-color);
+    border-color: var(--light-text-color);
+}
+
