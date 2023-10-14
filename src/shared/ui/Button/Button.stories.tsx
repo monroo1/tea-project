@@ -6,7 +6,7 @@ const meta: Meta<typeof Button> = {
     component: Button,
     tags: ["autodocs"],
     args: {
-        children: "Кнопкат",
+        children: "Кнопка",
     },
 };
 
@@ -27,22 +27,14 @@ export const Clear: Story = {
     },
 };
 
-export const DisabledOutline: Story = {
+export const Square: Story = {
     args: {
-        disable: true,
+        round: false,
     },
 };
 
-export const DisabledFilled: Story = {
+export const Disabled: Story = {
     args: {
-        variant: "filled",
-        disable: true,
-    },
-};
-
-export const DisabledClear: Story = {
-    args: {
-        variant: "clear",
         disable: true,
     },
 };

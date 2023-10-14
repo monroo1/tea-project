@@ -2,19 +2,18 @@
     background: transparent;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
-    border-radius: 40px;
     cursor: pointer;
     font-weight: 500;
     font-size: 18px;
     padding: 12px 32px;
-    
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .outline {
-    &:hover {
-        color: var(--accent-color);
-    }
-
     &.disabled {
         color: var(--light-text-color);
     }
@@ -23,18 +22,10 @@
 .filled {
     background: var(--primary-color);
     color: var(--bg-color);
-
-    &:hover {
-        opacity: 0.8;
-    }
 }
 
 .clear {
     border: none;
-
-    &.disabled {
-
-    }
 }
 
 .disabled {
@@ -45,3 +36,6 @@
     border-color: var(--light-text-color);
 }
 
+.round {
+    border-radius: 40px;
+}
