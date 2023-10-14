@@ -9,18 +9,28 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
     disable?: boolean;
     variant?: ButtonVariant;
+    round?: boolean;
 }
 
 export const Button = (props: ButtonProps) => {
-    const { children, className, disable = false, variant = "outline" } = props;
+    const {
+        children,
+        className,
+        disable = false,
+        variant = "outline",
+        round = true,
+    } = props;
 
     const mods: Mods = {
         [cls.disabled]: disable,
+        [cls.round]: round,
     };
+
+    const additionalClasses = [className, cls[variant]];
 
     return (
         <button
-            className={classNames(cls.Button, mods, [className, cls[variant]])}
+            className={classNames(cls.Button, mods, additionalClasses)}
             type="button"
             disabled={disable}
         >

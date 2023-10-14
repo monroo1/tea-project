@@ -27,15 +27,14 @@ export const Clear: Story = {
     },
 };
 
-export const Disabled: Story = {
+export const Square: Story = {
     args: {
-        disable: true,
+        round: false,
     },
 };
 
-export const DisabledClear: Story = {
+export const Disabled: Story = {
     args: {
-        variant: "clear",
         disable: true,
     },
 };
