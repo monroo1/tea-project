@@ -27,8 +27,15 @@ export const Clear: Story = {
     },
 };
 
-export const Disabled: Story = {
+export const DisabledOutline: Story = {
     args: {
+        disable: true,
+    },
+};
+
+export const DisabledFilled: Story = {
+    args: {
+        variant: "filled",
         disable: true,
     },
 };
