@@ -19,3 +19,17 @@ jobs:
               with:
                   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
                   exitZeroOnChanges: true
+    linting:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+            - name: Install dependencies
+              run: npm i
+            - name: Linting typescript
+              run: npm run lint
+              if: always()
+            - name: Linting css, scss
+              run: npm run lint:css

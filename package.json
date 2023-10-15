@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "lint:scss": "npx stylelint \"**/*.scss\"",
+        "lint:css": "npx stylelint \"**/*.{scss,css}\"",
         "prettier": "npx prettier --write **/*.{ts,tsx,json}",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
@@ -19,7 +19,7 @@
             "prettier --list-different",
             "eslint"
         ],
-        "**/*.scss": "npx stylelint"
+        "**/*.{scss,css}": "npx stylelint"
     },
     "dependencies": {
         "next": "13.5.4",
