@@ -1,10 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Text } from "./Text";
+import { CenterStoryDecorator } from "@/shared/config/storybook/CenterStoryDecorator/CenterStoryDecorator";
 
 const meta: Meta<typeof Text> = {
     title: "shared/Text",
     component: Text,
     tags: ["autodocs"],
+    decorators: [
+        (Story) => (
+            <div style={{ maxWidth: 500 + "px" }}>
+                <Story />
+            </div>
+        ),
+        CenterStoryDecorator,
+    ],
 };
 
 export default meta;

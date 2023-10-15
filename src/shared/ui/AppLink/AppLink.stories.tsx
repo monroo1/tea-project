@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { AppLink } from "./AppLink";
+import { CenterStoryDecorator } from "@/shared/config/storybook/CenterStoryDecorator/CenterStoryDecorator";
 
 const meta: Meta<typeof AppLink> = {
     title: "shared/AppLink",
@@ -9,6 +10,7 @@ const meta: Meta<typeof AppLink> = {
         href: "/",
         children: "Главная",
     },
+    decorators: [CenterStoryDecorator],
 };
 
 export default meta;
