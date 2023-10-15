@@ -8,13 +8,9 @@
         "react/jsx-filename-extension": [
             2,
             {
-                "extensions": [
-                    ".ts",
-                    ".tsx",
-                    ".js",
-                    ".jsx"
-                ]
+                "extensions": [".ts", ".tsx", ".js", ".jsx"]
             }
-        ]
+        ],
+        "react/display-name": "off"
     }
 }

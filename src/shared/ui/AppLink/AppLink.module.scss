@@ -1,0 +1,80 @@
+.AppLink {
+    position: relative;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.5s ease-in-out;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        top: 6px;
+        left: -7px;
+
+        width: 3px;
+        height: calc(100% + 6px);
+
+        background: transparent;
+
+        transition: all 0.5s ease-in-out;
+    }
+
+    &.active {
+        &::after {
+            top: -4px;
+            left: -7px;
+        }
+    }
+
+    &:hover {
+        &::after {
+            top: -4px;
+            left: -7px;
+        }
+    }
+    
+    &.primary {
+        color: var(--secondary-color);
+
+        &:hover {
+            color: var(--primary-color);
+
+            &::after {
+                background: var(--primary-color);
+            }
+        }
+
+        &.active {
+            color: var(--primary-color);
+
+            &::after {
+                background: var(--primary-color);
+            }
+        }
+    }
+
+    &.secondary {
+        color: var(--light-text-color);
+
+        &:hover {
+            color: var(--secondary-color);
+
+            &::after {
+                background: var(--secondary-color);
+            }
+        }
+
+        &.active {
+            color: var(--secondary-color);
+
+            &::after {
+                background: var(--secondary-color);
+            }
+        }
+    }
+}
+
+

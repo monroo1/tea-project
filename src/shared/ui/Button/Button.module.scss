@@ -1,11 +1,15 @@
 .Button {
+    cursor: pointer;
+
+    padding: 12px 32px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+
     background: transparent;
     border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 18px;
-    padding: 12px 32px;
+
     transition: all 0.1s ease-in-out;
 
     &:hover {
@@ -20,8 +24,8 @@
 }
 
 .filled {
-    background: var(--primary-color);
     color: var(--bg-color);
+    background: var(--primary-color);
 }
 
 .clear {
@@ -29,10 +33,12 @@
 }
 
 .disabled {
-    opacity: 0.6;
     cursor: default;
-    background: none;
+
     color: var(--light-text-color);
+
+    opacity: 0.6;
+    background: none;
     border-color: var(--light-text-color);
 }
 

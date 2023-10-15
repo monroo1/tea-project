@@ -1,44 +1,59 @@
 {
-  "name": "tea-project",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prettier": "npx prettier --write **/*.{ts,tsx,json}",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_de20c79de58d622"
-  },
-  "dependencies": {
-    "next": "13.5.4",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@storybook/addon-essentials": "^7.4.6",
-    "@storybook/addon-interactions": "^7.4.6",
-    "@storybook/addon-links": "^7.4.6",
-    "@storybook/addon-onboarding": "^1.0.8",
-    "@storybook/blocks": "^7.4.6",
-    "@storybook/nextjs": "^7.4.6",
-    "@storybook/react": "^7.4.6",
-    "@storybook/testing-library": "^0.2.2",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "chromatic": "^7.4.0",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.4",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-storybook": "^0.6.15",
-    "prettier": "^3.0.3",
-    "sass": "^1.69.3",
-    "storybook": "^7.4.6",
-    "typescript": "^5"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "tea-project@0.1.0"
+    "name": "tea-project",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "lint:scss": "npx stylelint \"**/*.scss\"",
+        "prettier": "npx prettier --write **/*.{ts,tsx,json}",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build",
+        "chromatic": "npx chromatic --project-token=chpt_de20c79de58d622",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "**/*.{ts,tsx}": [
+            "prettier --list-different",
+            "eslint"
+        ],
+        "**/*.scss": "npx stylelint"
+    },
+    "dependencies": {
+        "next": "13.5.4",
+        "react": "^18",
+        "react-dom": "^18"
+    },
+    "devDependencies": {
+        "@storybook/addon-essentials": "^7.4.6",
+        "@storybook/addon-interactions": "^7.4.6",
+        "@storybook/addon-links": "^7.4.6",
+        "@storybook/addon-onboarding": "^1.0.8",
+        "@storybook/blocks": "^7.4.6",
+        "@storybook/nextjs": "^7.4.6",
+        "@storybook/react": "^7.4.6",
+        "@storybook/testing-library": "^0.2.2",
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "chromatic": "^7.4.0",
+        "eslint": "^8",
+        "eslint-config-next": "13.5.4",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-storybook": "^0.6.15",
+        "husky": "^8.0.3",
+        "lint-staged": "^15.0.1",
+        "prettier": "^3.0.3",
+        "sass": "^1.69.3",
+        "storybook": "^7.4.6",
+        "stylelint": "^15.10.3",
+        "stylelint-config-clean-order": "^5.2.0",
+        "stylelint-config-standard-scss": "^11.0.0",
+        "stylelint-order": "^6.0.3",
+        "typescript": "^5"
+    },
+    "readme": "ERROR: No README data found!",
+    "_id": "tea-project@0.1.0"
 }
