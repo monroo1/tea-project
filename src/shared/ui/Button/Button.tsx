@@ -1,5 +1,5 @@
 import { Mods, classNames } from "@/shared/lib/classNames/classNames";
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode, memo } from "react";
 import cls from "./Button.module.scss";
 
 export type ButtonVariant = "outline" | "filled" | "clear";
@@ -12,7 +12,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     round?: boolean;
 }
 
-export const Button = (props: ButtonProps) => {
+export const Button = memo((props: ButtonProps) => {
     const {
         children,
         className,
@@ -37,4 +37,4 @@ export const Button = (props: ButtonProps) => {
             {children}
         </button>
     );
-};
+});
