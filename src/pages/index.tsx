@@ -1,6 +1,8 @@
 import { Button } from "@/shared/ui/Button";
-import { comfortaa } from "@/shared/ui/fonts/comfortaa";
+import { comfortaa } from "@/shared/fonts/comfortaa";
 import Head from "next/head";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { getStack } from "@/shared/ui/Stack";
 
 export default function Home() {
     return (
@@ -18,8 +20,20 @@ export default function Home() {
                 {/* <link rel="icon" href="/favicon.ico" /> */}
             </Head>
             <main className={comfortaa.className}>
-                <div>123</div>
-                <Button>Кнопка</Button>
+                <div
+                    className={classNames("", {}, [
+                        getStack({
+                            direction: "column",
+                            justify: "center",
+                            align: "center",
+                            gap: "32",
+                            fullHeight: true,
+                        }),
+                    ])}
+                >
+                    <div>123</div>
+                    <Button>Кнопка</Button>
+                </div>
             </main>
         </>
     );

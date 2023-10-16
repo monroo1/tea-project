@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./Button";
+import { CenterStoryDecorator } from "@/shared/config/storybook/CenterStoryDecorator/CenterStoryDecorator";
 
 const meta: Meta<typeof Button> = {
     title: "shared/Button",
@@ -8,6 +9,7 @@ const meta: Meta<typeof Button> = {
     args: {
         children: "Кнопка",
     },
+    decorators: [CenterStoryDecorator],
 };
 
 export default meta;
