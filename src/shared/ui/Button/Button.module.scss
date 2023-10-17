@@ -1,6 +1,10 @@
 .Button {
     cursor: pointer;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     padding: 12px 32px;
 
     font-size: 18px;
@@ -32,6 +36,11 @@
     border: none;
 }
 
+.addonRight svg {
+	color: var(--primary-color);
+}
+
+
 .disabled {
     cursor: default;
 
@@ -40,8 +49,26 @@
     opacity: 0.6;
     background: none;
     border-color: var(--light-text-color);
+
+    .addonRight svg{
+        color: var(--light-text-color);
+    }
 }
 
 .round {
     border-radius: 40px;
 }
+
+.fullWidth {
+	width: 100%;
+}
+
+.withAddon {
+    justify-content: space-between;
+	padding: 0 8px 0 16px;
+}
+
+.addonRight {
+	display: flex;
+}
+
