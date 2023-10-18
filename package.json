@@ -22,6 +22,7 @@
         "**/*.{scss,css}": "npx stylelint"
     },
     "dependencies": {
+        "@headlessui/react": "^1.7.17",
         "next": "13.5.4",
         "react": "^18",
         "react-dom": "^18"

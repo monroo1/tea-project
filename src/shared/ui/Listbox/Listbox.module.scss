@@ -1,0 +1,78 @@
+.popup {
+	position: relative;
+}
+
+.menu {
+	overflow: hidden;
+	border-radius: 18px;
+}
+
+.active {
+    color: var(--dark-bg-color);
+	background: var(--primary-color);
+}
+
+.disabled {
+	opacity: 0.6;
+    background: #C5C5C5;
+}
+
+.trigger {
+	cursor: pointer;
+
+	margin: 0;
+	padding: 0;
+
+	background: none;
+	border: none;
+	outline: none;
+}
+
+.optionsBottomLeft{
+	top: 100%;
+	right: 0;
+}
+
+.optionsBottomRight{
+	top: 100%;
+	left: 0;
+}
+
+.optionsTopLeft {
+	right: 0;
+	bottom: 100%;
+}
+
+.optionsTopRight {
+	bottom: 100%;
+	left: 0;
+}
+
+.options {
+    position: absolute;
+	z-index: 1000;
+
+	min-width: 100%;
+    margin: 8px 0;
+    padding: 0;
+
+    list-style-type: none;
+
+	border-radius: 12px;
+	box-shadow: 2px 2px 14px var(--primary-color);
+
+
+	.top {
+		bottom: 100%
+	}
+}
+
+.item {
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.selected {
+    color: var(--dark-bg-color);
+	background: var(--primary-color)
+}
