@@ -7,4 +7,12 @@
     --light-text-color: #5C6880;
     --accent-color: #28B5B5;
     --hidden-color: #C5C5C5;
+
+    // z index
+    --z-modal: -1;
+	--z-modal-opened: 1000;
+	--z-dropdown: 100;
+	--z-listbox: 100;
+	--z-sidebar: 10;
+	--z-overlay: -1;
 }

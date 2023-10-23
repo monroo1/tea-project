@@ -1,0 +1,44 @@
+.Tabs {
+    display: flex;
+    gap: 32px;
+
+    & .tab {
+        cursor: pointer;
+        position: relative;
+        color: var(--light-text-color);
+        transition: all 0.3s ease-in;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            bottom: -7px;
+            left: -10px;
+
+            width: 17px;
+            height: 2px;
+
+            background: none;
+
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            color: var(--text-color);
+
+            &::before {
+                left: 0;
+                background: var(--accent-color);
+            }
+        }
+    }
+
+    & .selected {
+        color: var(--text-color);
+
+        &::before {
+            left: 0;
+            background: var(--accent-color);
+        }
+    }
+}
