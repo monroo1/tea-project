@@ -11,14 +11,7 @@ const meta: Meta<typeof Button> = {
     args: {
         children: "Кнопка",
     },
-    decorators: [
-        (Story) => (
-            <div style={{ width: "250px" }}>
-                <Story />
-            </div>
-        ),
-        CenterStoryDecorator,
-    ],
+    decorators: [CenterStoryDecorator],
 };
 
 export default meta;
@@ -48,6 +41,13 @@ export const FullWidth: Story = {
     args: {
         fullWidth: true,
     },
+    decorators: [
+        (Story) => (
+            <div style={{ width: "250px" }}>
+                <Story />
+            </div>
+        ),
+    ],
 };
 
 export const WithAddon: Story = {
@@ -61,6 +61,13 @@ export const FullWidthWithAddon: Story = {
         fullWidth: true,
         addonRight: <Icon Svg={ArrowIcon} />,
     },
+    decorators: [
+        (Story) => (
+            <div style={{ width: "250px" }}>
+                <Story />
+            </div>
+        ),
+    ],
 };
 
 export const Disabled: Story = {
