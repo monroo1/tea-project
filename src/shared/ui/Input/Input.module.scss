@@ -1,0 +1,57 @@
+.InputWrapper {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 8px 12px;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 48px;
+}
+
+.input {
+    width: 100%;
+
+    color: var(--text-color);
+
+    background: none;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+        color: var(--light-text-color);
+    }
+}
+
+.readonly {
+    opacity: 0.6;
+}
+
+.addon {
+    display: flex;
+}
+
+.focused {
+	border: 1px solid var(--accent-color);
+
+    .addon svg {
+        color: var(--accent-color);
+    }
+}
+
+.withAddon {
+	gap: 8px;
+}
+
+.s {
+	height: 22px;
+}
+
+.m {
+	height: 26px;
+}
+
+.l {
+	height: 32px;
+    padding: 8px 16px;
+}

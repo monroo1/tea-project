@@ -1,0 +1,32 @@
+.Icon {
+    transition: all 0.15s ease-in;
+
+    &.black {
+        color: var(--text-color);
+    }
+
+    &.primary {
+        color: var(--primary-color);
+    }
+}
+
+.button {
+    cursor: pointer;
+
+    margin: 0;
+    padding: 0;
+
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.button:hover .Icon {
+    &.black {
+        color: var(--primary-color);
+    }
+
+    &.primary {
+        color: var(--accent-color);
+    }
+}

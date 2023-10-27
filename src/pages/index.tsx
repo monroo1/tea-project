@@ -1,6 +1,12 @@
 import { Button } from "@/shared/ui/Button";
-import { comfortaa } from "@/shared/ui/fonts/comfortaa";
+import { comfortaa } from "@/shared/fonts/comfortaa";
 import Head from "next/head";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { getStack } from "@/shared/ui/Stack";
+import { Text } from "@/shared/ui/Text";
+import { Input } from "@/shared/ui/Input/Input";
+import FindIcon from "@/shared/assets/icons/Find.svg";
+import { Icon } from "@/shared/ui/Icon";
 
 export default function Home() {
     return (
@@ -15,11 +21,38 @@ export default function Home() {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                {/* <link rel="icon" href="/favicon.ico" /> */}
+                <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={comfortaa.className}>
-                <div>123</div>
-                <Button>Кнопка</Button>
+                <div
+                    className={classNames("", {}, [
+                        getStack({
+                            direction: "column",
+                            justify: "center",
+                            align: "center",
+                            gap: "32",
+                            fullHeight: true,
+                        }),
+                    ])}
+                >
+                    <div>123</div>
+                    <Button>Кнопка</Button>
+                    <Text
+                        title="Заголовок"
+                        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quam ut est reiciendis enim, reprehenderit nisi, quis dolorem, ea assumenda minus voluptatem nemo inventore deleniti debitis totam non aperiam magnam."
+                        className={getStack({
+                            direction: "row",
+                            justify: "center",
+                            align: "center",
+                            gap: "32",
+                            fullHeight: true,
+                        })}
+                    />
+                    <Input
+                        placeholder="Type..."
+                        addon={<Icon Svg={FindIcon} width={24} />}
+                    />
+                </div>
             </main>
         </>
     );
