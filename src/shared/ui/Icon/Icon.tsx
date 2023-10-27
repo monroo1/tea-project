@@ -3,10 +3,12 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./Icon.module.scss";
 
 type SvgProps = Omit<React.SVGProps<SVGSVGElement>, "onClick">;
+type IconColor = "primary" | "black";
 
 interface IconBaseProps extends SvgProps {
     className?: string;
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>;
+    color?: IconColor;
 }
 
 interface NonClickableBaseIconProps extends IconBaseProps {
@@ -27,12 +29,13 @@ export const Icon = memo((props: IconProps) => {
         width = 32,
         clickable,
         height = 32,
+        color = "primary",
         ...otherProps
     } = props;
 
     const icon = (
         <Svg
-            className={classNames(cls.Icon, {}, [className])}
+            className={classNames(cls.Icon, {}, [className, cls[color]])}
             width={width}
             height={height}
             {...otherProps}

@@ -1,0 +1,5 @@
+.AppLogo {
+    & path:last-child {
+        fill: var(--dark-bg-color);
+    }
+}
