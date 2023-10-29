@@ -31,7 +31,7 @@ export const Header = memo((props: HeaderProps) => {
                 <AppLink href="/">Главная</AppLink>
                 <AppLink href="/about">О нас</AppLink>
                 <AppLink href="/products">Каталог</AppLink>
-                <AppLink href="/promo">Акции</AppLink>
+                <AppLink href="/">Оставить заявку</AppLink>
             </HStack>
             <Link href="/products">
                 <Icon Svg={CartIcon} width={18} color="black" clickable />
