@@ -1,4 +1,17 @@
 .Header {
-    max-width: 1180px;
-    margin: 0 auto;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background: var(--dark-bg-color);
+   
+
+    .wrapper {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding:  0 24px;
+    }
+
+    .activeScroll {
+        background: red;
+    }
 }

@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 export type FlexJustify = "start" | "center" | "end" | "between";
 export type FlexAlign = "start" | "center" | "end";
-export type FlexDirection = "row" | "column";
+export type FlexDirection = "row" | "column" | "row-reverse";
 export type FlexWrap = "nowrap" | "wrap";
 export type FlexGap = "4" | "8" | "16" | "24" | "32";
 
@@ -24,6 +24,7 @@ export const alignClasses: Record<FlexAlign, string> = {
 export const directionClasses: Record<FlexDirection, string> = {
     row: cls.directionRow,
     column: cls.directionColumn,
+    "row-reverse": cls.directionRowReverse,
 };
 
 export const gapClasses: Record<FlexGap, string> = {

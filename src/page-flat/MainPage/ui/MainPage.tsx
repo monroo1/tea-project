@@ -1,17 +1,16 @@
 import { memo } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import cls from "./MainPage.module.scss";
+import { FirstScreen } from "@/widgets/FirstScreen/ui/FirstScreen";
+import { AboutUs } from "@/features/AboutUs";
+import { Advantages } from "@/features/Advantages";
+import { SubmitApplication } from "@/features/SubmitApplication";
 
-interface MainPageProps {
-    className?: string;
-}
-
-export const MainPage = memo((props: MainPageProps) => {
-    const { className } = props;
-
+export const MainPage = memo(() => {
     return (
-        <div className={classNames(cls.MainPage, {}, [className])}>
-            MainPage
-        </div>
+        <>
+            <FirstScreen />
+            <AboutUs />
+            <SubmitApplication />
+            <Advantages />
+        </>
     );
 });

@@ -1,6 +1,5 @@
 import { memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import cls from "./ProductsPage.module.scss";
 
 interface ProductsPageProps {
     className?: string;
@@ -9,9 +8,5 @@ interface ProductsPageProps {
 export const ProductsPage = memo((props: ProductsPageProps) => {
     const { className } = props;
 
-    return (
-        <div className={classNames(cls.ProductsPage, {}, [className])}>
-            ProductsPage
-        </div>
-    );
+    return <div className={classNames("", {}, [className])}>ProductsPage</div>;
 });
