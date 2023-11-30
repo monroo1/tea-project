@@ -1,5 +1,5 @@
 import { memo, useCallback, useState } from "react";
-import { InfoBlock } from "@/widgets/InfoBlock";
+import { InfoBlock } from "@/features/InfoBlock";
 import { Modal } from "@/shared/ui/Modal/Modal";
 import { HStack, VStack } from "@/shared/ui/Stack";
 import { Button } from "@/shared/ui/Button";

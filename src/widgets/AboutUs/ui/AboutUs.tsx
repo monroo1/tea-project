@@ -1,5 +1,5 @@
 import { memo, useCallback } from "react";
-import { InfoBlock } from "@/widgets/InfoBlock";
+import { InfoBlock } from "@/features/InfoBlock";
 import { useRouter } from "next/router";
 import { getRouteProducts } from "@/shared/const/router";
 
@@ -21,8 +21,8 @@ export const AboutUs = memo((props: AboutUsProps) => {
             id="about"
             className={className}
             imageUrl="/images/photo_2023-10-06_10-51-05.jpg"
-            title="наши преимущества"
-            titleAccent="О нас"
+            title="О нас"
+            titleAccent="наши преимущества"
             text="People have been using natural objects, such as tree stumps, rocks and moss, as furniture since thebeginning of human civilisation. "
             buttonContent="Кнопка"
             buttonCallback={navigateProducts}

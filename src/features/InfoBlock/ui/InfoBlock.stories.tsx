@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { InfoBlock } from "./InfoBlock";
 
 const meta: Meta<typeof InfoBlock> = {
-    title: "widgets/InfoBlock",
+    title: "features/InfoBlock",
     component: InfoBlock,
     tags: ["autodocs"],
 };

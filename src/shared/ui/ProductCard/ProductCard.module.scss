@@ -1,0 +1,24 @@
+.ProductCard {
+    text-decoration: none;
+}
+
+.productImage {
+    object-fit: cover;
+    border-radius: 30px;
+}
+    
+.productTitle {
+    color: var(--secondary-color);
+
+    & > p {
+        letter-spacing: 0.15ch;
+    }
+}
+
+.productPrice {
+    color: var(--primary-color);
+
+    & > p {
+        letter-spacing: 0.1ch;
+    }
+}
