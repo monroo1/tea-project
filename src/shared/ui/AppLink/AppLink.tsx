@@ -11,6 +11,7 @@ interface AppLinkProps {
     children: ReactNode;
     isActive?: boolean;
     variant?: AppLinkVariant;
+    scroll?: boolean;
 }
 
 export const AppLink = memo((props: AppLinkProps) => {
@@ -20,11 +21,13 @@ export const AppLink = memo((props: AppLinkProps) => {
         children,
         isActive = false,
         variant = "primary",
+        scroll = true,
     } = props;
 
     return (
         <Link
             href={href}
+            scroll={scroll}
             className={classNames(cls.AppLink, { [cls.active]: isActive }, [
                 className,
                 cls[variant],
